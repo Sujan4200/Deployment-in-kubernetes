@@ -21,7 +21,7 @@ spec:
         - containerPort: 27017
         volumeMounts:
         - name: mongo-pvc
-          mountPath: /home/nik/Desktop/Kubernetes/mongodb
+          mountPath: /data/db
         env:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
@@ -39,3 +39,4 @@ spec:
             claimName: mongodb-pvc
       
           
+

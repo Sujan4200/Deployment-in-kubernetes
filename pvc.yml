@@ -4,7 +4,7 @@ metadata:
   name: mongodb-pvc
 spec:
   volumeName: mongodb-pv
-  storageClassName: local-storage
+  storageClassName: standard
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce

@@ -7,7 +7,7 @@ spec:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce  
-  storageClassName: local-storage
+  storageClassName: standard
   hostPath:
     path: "/home/nik/Desktop/Kubernetes/mongodb/vol"
 
