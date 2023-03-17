@@ -19,6 +19,9 @@ spec:
         image: mongo:5.0
         ports:
         - containerPort: 27017
+        volumeMounts:
+        - name: mongo-pvc
+          mountPath: /home/nik/Desktop/Kubernetes/mongodb
         env:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
@@ -30,3 +33,9 @@ spec:
             secretKeyRef:
               name: mongo-secret
               key: mongo-password
+      volumes:
+        - name: mongo-pvc
+          persistentVolumeClaim:
+            claimName: mongodb-pvc
+      
+          
